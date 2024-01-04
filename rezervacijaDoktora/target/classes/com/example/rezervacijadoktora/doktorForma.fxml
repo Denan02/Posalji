@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rezervacijadoktora.DoktorController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.0" minWidth="0.0" prefWidth="80.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="496.0" minWidth="10.0" prefWidth="160.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="502.0" minWidth="10.0" prefWidth="492.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="129.0" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="129.0" minHeight="0.0" prefHeight="13.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="407.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="406.0" minHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="400.0" minHeight="6.0" prefHeight="39.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="400.0" minHeight="0.0" prefHeight="37.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="400.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="421.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="421.0" minHeight="2.0" prefHeight="9.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="400.0" minHeight="10.0" prefHeight="324.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label alignment="TOP_LEFT" text="Kreiranje termina" GridPane.columnIndex="1" />
+      <Separator prefWidth="200.0" GridPane.rowIndex="1" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label text="Mjesec" GridPane.rowIndex="2" />
+      <Label text="Dan" GridPane.rowIndex="3" />
+      <Label text="Sati" GridPane.rowIndex="4" />
+      <Label text="Minute" GridPane.rowIndex="5" />
+      <Label text="Opis pregleda" GridPane.rowIndex="6" />
+      <TextField fx:id="mjesecText" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin></TextField>
+      <TextField fx:id="danText" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin></TextField>
+      <TextField fx:id="satiText" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin></TextField>
+      <TextField fx:id="minuteText" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin></TextField>
+      <TextField fx:id="opisText" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin></TextField>
+      <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kreirajClick" prefHeight="25.0" prefWidth="225.0" text="Kreiraj termin" GridPane.columnSpan="2" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin></Button>
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="2" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="492.0" text="Pisanje nalaza" GridPane.columnIndex="2" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Label text="JMBG" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
+      <Label text="Text nalaza:" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
+      <TextArea fx:id="textNalaz" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" GridPane.rowSpan="3">
+         <GridPane.margin>
+            <Insets left="9.0" right="5.0" />
+         </GridPane.margin>
+      </TextArea>
+      <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#nalazClick" prefHeight="25.0" prefWidth="482.0" text="Napisi nalaz" GridPane.columnIndex="2" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets left="9.0" right="5.0" />
+         </GridPane.margin></Button>
+      <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+      <Separator prefWidth="200.0" GridPane.rowIndex="8" />
+      <TextField fx:id="jmbgNalan" prefHeight="25.0" prefWidth="180.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="40.0" />
+         </GridPane.margin>
+      </TextField>
+      <HBox prefHeight="336.0" prefWidth="752.0" GridPane.columnSpan="3" GridPane.rowIndex="9">
+         <children>
+            <ListView fx:id="l1" prefHeight="284.0" prefWidth="146.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></ListView>
+            <ListView fx:id="l2" prefHeight="284.0" prefWidth="213.0" />
+            <Separator orientation="VERTICAL" prefHeight="284.0" prefWidth="0.0">
+               <padding>
+                  <Insets left="3.0" />
+               </padding>
+            </Separator>
+            <ListView fx:id="l3" prefHeight="284.0" prefWidth="202.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></ListView>
+            <ListView fx:id="l4" prefHeight="284.0" prefWidth="189.0" />
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets bottom="30.0" />
+         </GridPane.margin>
+      </HBox>
+      <HBox prefHeight="0.0" prefWidth="502.0" GridPane.columnSpan="3" GridPane.rowIndex="9">
+         <GridPane.margin>
+            <Insets top="300.0" />
+         </GridPane.margin>
+         <children>
+            <Button mnemonicParsing="false" onAction="#nalaziClick" prefHeight="25.0" prefWidth="359.0" text="Ucitaj nalaze">
+               <padding>
+                  <Insets right="2.0" />
+               </padding>
+            </Button>
+            <Button fx:id="rezervacijeClick" mnemonicParsing="false" onAction="#rezervacijeKC" prefHeight="25.0" prefWidth="393.0" text="Ucitaj rezervisane termine">
+               <padding>
+                  <Insets left="2.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</GridPane>

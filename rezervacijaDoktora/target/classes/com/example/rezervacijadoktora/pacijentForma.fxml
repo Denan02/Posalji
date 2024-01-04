@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="894.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rezervacijadoktora.PacijentForma">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="433.0" minWidth="10.0" prefWidth="351.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="385.0" minWidth="10.0" prefWidth="384.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="405.0" minHeight="10.0" prefHeight="399.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="139.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="123.0" minHeight="6.0" prefHeight="38.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button fx:id="ucitaj" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ucitajClick" text="Ucitaj slobodne termine" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin></Button>
+      <Label text="Unesite id termina za rezervaciju" GridPane.rowIndex="4" />
+      <TextField fx:id="idTerm" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="180.0" right="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#rezervisiClick" text="Rezervisi" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin></Button>
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="1" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1" GridPane.rowSpan="2">
+         <children>
+            <ListView fx:id="lista1" prefHeight="428.0" prefWidth="81.0" />
+            <ListView fx:id="lista2" prefHeight="428.0" prefWidth="78.0" />
+            <ListView fx:id="lista3" prefHeight="428.0" prefWidth="77.0" />
+            <ListView fx:id="lista4" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" />
+         </GridPane.margin>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="ID TERMINA">
+               <padding>
+                  <Insets bottom="5.0" top="10.0" />
+               </padding>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Label text="DATUM">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="200.0">
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+            </Separator>
+            <Label prefHeight="27.0" prefWidth="53.0" text="VRIJEME">
+               <padding>
+                  <Insets bottom="5.0" left="4.0" top="10.0" />
+               </padding>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Label prefHeight="27.0" prefWidth="175.0" text="OPIS PREGLEDA">
+               <padding>
+                  <Insets bottom="5.0" left="42.0" top="10.0" />
+               </padding>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+         </children>
+      </HBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="2">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <ListView fx:id="nalazL1" prefHeight="200.0" prefWidth="200.0" />
+            <Separator prefWidth="200.0">
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </Separator>
+            <Label text="REZERVISANI TERMINI:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <HBox prefHeight="204.0" prefWidth="499.0">
+               <children>
+                  <ListView fx:id="terminL1" prefHeight="199.0" prefWidth="97.0" />
+                  <ListView fx:id="terminL2" prefHeight="199.0" prefWidth="97.0" />
+                  <ListView fx:id="terminL3" prefHeight="199.0" prefWidth="306.0" />
+               </children></HBox>
+         </children>
+      </VBox>
+      <Label text="NALAZI:" GridPane.columnIndex="1">
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
+      <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#nalaziClick" text="UCITAJ MOJE NALAZE" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin>
+      </Button>
+      <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#rezervacijeClick" text="UCITAJ REZERVISANE TERMINE" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin>
+      </Button>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</GridPane>
